@@ -50,12 +50,12 @@ def frequency_analysis(plain_text):
 
     return letter_frequency
 
-#def plot_distribution(letter_frequency):
-#	centers = range(len(ALPHABET))
-#	plt.bar(centers, letter_frequency.values(), align='center', tick_label=letter_frequency.keys())
-#	plt.xlim([0,len(ALPHABET)-1])
-#	plt.show()
-#	
+def plot_distribution(letter_frequency):
+	centers = range(len(ALPHABET))
+	plt.bar(centers, letter_frequency.values(), align='center', tick_label=letter_frequency.keys())
+	plt.xlim([0,len(ALPHABET)-1])
+	plt.show()
+	
 
 if __name__ == "__main__":
 	

@@ -1,4 +1,4 @@
-#import matplotlib.pylab as plt
+import matplotlib.pylab as plt
 
 LETTERS = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
@@ -21,17 +21,17 @@ def frequency_analysis(cipher_text):
     return letter_frequency
 
 #plotting ciphertext. 
-#def plot_distribution(letter_frequency):
-#	centers = range(len(LETTERS))
-#	plt.bar(centers, letter_frequency.values(), align='center', tick_label=letter_frequency.keys())
-#	plt.xlim([0,len(LETTERS)-1])
-#	plt.show()
+def plot_distribution(letter_frequency):
+	centers = range(len(LETTERS))
+	plt.bar(centers, letter_frequency.values(), align='center', tick_label=letter_frequency.keys())
+	plt.xlim([0,len(LETTERS)-1])
+	plt.show()
 	
 def caesar_crack(cipher_text):
 	
 	letter_frequency = frequency_analysis(cipher_text)
 	print(letter_frequency)
-#	plot_distribution(letter_frequency)
+	plot_distribution(letter_frequency)
 	
 	
 if __name__ == "__main__":
