@@ -34,10 +34,10 @@ def caesar_decrypt(cipher_text):
     for c in cipher_text:
         #find the numerical representation (index associated with character)
         index = ALPHABET.find(c)
-        #caesar encryption is simple shift
+        #caesar decryption is simple shift
         #need to divide and get modulo by length of caesar encryption
         index = (index-KEY)%len(ALPHABET)
-        #keeping encrypt word
+        #keeping decrypt word
         plain_text = plain_text + ALPHABET[index]
         
     return plain_text
